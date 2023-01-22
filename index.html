@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Books_Library</title>
 </head>
 <body>
-$END$
+<h3>
+    Add book to the shelf
+</h3>
+
+<form action="/add" method="post">
+    <fieldset>
+        <label for="book_name">Book name:</label><br>
+        <input type="text" id="book_name" name="book_name" required><br>
+        <label for="author">Author:</label><br>
+        <input type="text" id="author" name="author" required>
+        <input type="submit" value="Submit">
+    </fieldset>
+</form>
+
+<h3>
+    Delete book to the shelf
+</h3>
+<form action="/delete" method="post">
+    <label for="delete_book_name">Book name:</label><br>
+    <input type="text" id="delete_book_name" name="delete_book_name"><br>
+    <input type="submit" value="Submit">
+</form>
+
+<h3>Show all in the shelf</h3>
+<form action="/view" method="post">
+    <input type="submit" value="View">
+</form>
 </body>
 </html>
